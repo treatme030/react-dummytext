@@ -7,7 +7,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    let amount = parseInt(count)// count가 문자타입으로 숫자로 변환
+    let amount = parseInt(count)// input에 입력된 count가 문자타입이므로 숫자로 변환
     if(count <= 0){
       amount = 1
     }
@@ -29,13 +29,11 @@ function App() {
         <button type="submit" className="btn">generate</button>
       </form>
       <article className="lorem-text">
-        <p>
-          {
-            text.map((item, index) => {
-              return <p key={index}>{item}</p>
-            })
-          }
-        </p>
+       {
+          text.map((item, index) => {
+            return <p key={index}>{item}</p>
+          })
+        }
       </article>
     </section>
   );
